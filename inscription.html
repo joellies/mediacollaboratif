@@ -23,7 +23,8 @@
         </div>
         <h2>Inscrivez-vous, c'est gratuit!</h2>
         <div class="container__mainContent--formulaire">
-          <form method="post" action="traitement.php">
+          <!-- J'ai modifié l'attribut ACTION -->
+          <form method="POST" action="Backend/inscription.php">
             <input
               type="text"
               id="firstname"
@@ -78,10 +79,11 @@
                 <a href="#">les conditions d'utilisations</a>
               </label>
             </div>
+            <input class="inscription" type="submit">S'inscrire</button>
+
           </form>
           <div class="container__mainContent--buttons">
             <button class="annuler" type="submit">Annuler</button>
-            <button class="inscription" type="submit">S'inscrire</button>
           </div>
         </div>
       </div>
