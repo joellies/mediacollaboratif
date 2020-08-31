@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajout d'un nouvel article</title>
+  <link rel="" href="">
+</head>
+<body>
+  <h1>Que souhaitez-vous publier aujourd'hui ?</h1>
+  <div class="o-formulaireAjoutArticle">
+    <form action="ajoutArticle.php" method="POST" id="ajoutArticle">
+      <div class="ajoutTitre">
+        <label for "titre">Titre</label>
+        <input type="text" id="titre" name="titre" required>
+      </div>
+      <div class="ajoutCategorie">
+        <label for="categorie">Catégorie</label></br>
+        <select id="categorie" name="categorie">
+          <option value="categorie_collaboration">Collaboration</option>
+          <option value="categorie_creativite">Créativité</option>
+          <option value="categorie_design">Design</option>
+          <option value="categorie_webdeveloppement">Web développement</option>
+        </select>
+      </div>
+      <div class="ajoutContenu">
+        <label for="contenu"></label>
+        <textarea name="article_contenu" id="article_contenu" required cols="120" rows="20" placeholder="Commencez à rédiger votre article" spellcheck="true" minlength="250"></textarea>
+      </div>
+      <div class="ajoutImage">
+        <img src="/images/ajout-image-icon.svg">
+        <label for="ajout-image">Ajouter une image</label>
+        <input type="file" name="ajouter-image">
+      </div>
+    </form>
+      <div class="envoyerArticle" id="submit">
+        <button type="submit" form="ajoutArticle" value="publier">Publier</button>
+      </div>
+  </div>
+</body>
+</html>
