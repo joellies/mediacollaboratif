@@ -3,10 +3,11 @@
 include_once 'connect.php';
 
 //Message success post article
-
-isset($_POST['article_titre']) && isset($_POST['article_contenu']) && isset($_POST['article_image'])) {
+if (isset($_POST['article_titre']) && isset($_POST['article_contenu']) && isset($_POST['article_image'])) {
   echo "Votre article a été publié";
-} else echo "Votre article n'a pas été publié";
+} else {
+  echo "Votre article n'a pas été publié";
+}
 
 //Déclaration des variables
 
