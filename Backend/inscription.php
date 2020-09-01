@@ -2,13 +2,7 @@
 //inclure le fichier de connexion pour appliquer les requet sql sur ce db
 require_once "DbConnexion/db.php";
 
-
-  
-//avant d'inserer nos données on doit verifer si les varaible global POST n'est pas vide
-//AND not NULL 
 //isset() va retourner FALSE(0) si la variable est NULL.
-//strip_tags() 
-//$new_string=trim($string_name);
 if(
     !isset(
         $_POST["userFirstname"],
@@ -19,29 +13,43 @@ if(
 {
     header("Location:../inscription.html?status=100")  ;
 }else {
+//avant d'inserer nos données on doit verifer si les varaible global POST n'est pas vide
 
-    if(empty($_POST["userPassword"]),empty($_POST["userPassword"]),empty($_POST["userPassword"]))
-    //securiser les données contre l'injection sql
+    if(
+        empty($_POST["userPassword"]) || empty($_POST["userPassword"]) || empty($_POST["userPassword"])  
+      )
+    {
+        header("Location:../inscription.html?status=300"); 
+    }else {            
+            try{
+
+            $stmt = $conn->prepare("INSERT INTO `utilisateurs` ( `user_prenom`, `user_nom`, `user_email`, `user_mdp`)
+            VALUES (:user_prenom ,:user_nom , :user_email, :user_mdp)");
+            $stmt->bindParam(':user_prenom', $userFirstname);
+            $stmt->bindParam(':user_nom', $userName);
+            $stmt->bindParam(':user_email', $userMail);
+            $stmt->bindParam(':user_mdp', $userPassword);
+
+            //remplir les données
+            $userFirstname =trim($_POST["userFirstname"]) ;
+            $userName =trim($_POST["userName"]) ;
+            $userMail =trim($_POST["userMail"]) ;
+            $userPassword =trim($_POST["userPassword"]) ;
+            //executer la requet
+            $stmt->execute();
+            
+            header("Location:../inscription.html?status=200")  ;
+
+            }catch( PDOException $e ) {
+
+                echo $e->getMessage();
+            }
+    }
 
     //Hasher le mot de passe pour que ce soit pas visible 
 
     //à la fin on insert les données
-    try{
-    $stmt = $conn->prepare("INSERT INTO `utilisateurs` ( `user_prenom`, `user_nom`, `user_email`, `user_mdp`)
-    VALUES (:user_prenom ,:user_nom , :user_email, :user_mdp)");
-    $stmt->bindParam(':user_prenom', $_POST["userFirstname"]);
-    $stmt->bindParam(':user_nom', $_POST["userName"]);
-    $stmt->bindParam(':user_email', $_POST["userMail"]);
-    $stmt->bindParam(':user_mdp', $_POST["userPassword"]);
 
-    $stmt->execute();
-
-    header("Location:../inscription.html?status=200")  ;
-
-    }catch( PDOException $e ) {
-
-        echo $e->getMessage();
-    }
 
 
 }
