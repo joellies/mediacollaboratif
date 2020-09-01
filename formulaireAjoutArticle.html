@@ -9,14 +9,14 @@
 <body>
   <h1>Que souhaitez-vous publier aujourd'hui ?</h1>
   <div class="o-formulaireAjoutArticle">
-    <form action="ajoutArticle.php" method="POST" id="ajoutArticle">
+    <form action="ajoutArticle.php" method="POST">
       <div class="ajoutTitre">
         <label for "titre">Titre</label>
-        <input type="text" id="titre" name="titre" required>
+        <input type="text" id="titre" name="article_titre" required>
       </div>
       <div class="ajoutCategorie">
         <label for="categorie">Catégorie</label></br>
-        <select id="categorie" name="categorie">
+        <select id="categorie" name="categorie_nom">
           <option value="categorie_collaboration">Collaboration</option>
           <option value="categorie_creativite">Créativité</option>
           <option value="categorie_design">Design</option>
@@ -25,17 +25,17 @@
       </div>
       <div class="ajoutContenu">
         <label for="contenu"></label>
-        <textarea name="article_contenu" id="article_contenu" required cols="120" rows="20" placeholder="Commencez à rédiger votre article" spellcheck="true" minlength="250"></textarea>
+        <textarea name="article_contenu" id="contenu" required cols="120" rows="20" placeholder="Commencez à rédiger votre article" spellcheck="true" minlength="250"></textarea>
       </div>
       <div class="ajoutImage">
         <img src="/images/ajout-image-icon.svg">
-        <label for="ajout-image">Ajouter une image</label>
-        <input type="file" name="ajouter-image">
+        <label for="ajout_image">Ajouter une image</label>
+        <input type="file" name="article_image" required>
+      </div>
+      <div class="envoyerArticle" id="submit">
+        <input type="submit">Publier</input>
       </div>
     </form>
-      <div class="envoyerArticle" id="submit">
-        <button type="submit" form="ajoutArticle" value="publier">Publier</button>
-      </div>
   </div>
 </body>
 </html>
