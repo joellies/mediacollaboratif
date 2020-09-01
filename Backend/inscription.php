@@ -30,6 +30,9 @@ if(
             $stmt->bindParam(':user_email', $userMail);
             $stmt->bindParam(':user_mdp', $userPassword);
 
+            //bCrypter le mot de passe pour que ce soit pas visible 
+            
+
             //remplir les données
             $userFirstname =trim($_POST["userFirstname"]) ;
             $userName =trim($_POST["userName"]) ;
@@ -46,7 +49,6 @@ if(
             }
     }
 
-    //Hasher le mot de passe pour que ce soit pas visible 
 
     //à la fin on insert les données
 
