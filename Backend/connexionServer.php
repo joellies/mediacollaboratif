@@ -38,7 +38,6 @@ if(
                         var_dump($userid);
 
                     header("Location:./article/ajouteArticle.php?userid=$userid"); 
-
                 }
        
 
