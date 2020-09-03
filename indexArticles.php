@@ -8,7 +8,7 @@ $statement = $conn->prepare($sql);
 
 $statement->execute();
 
-$articles = $statement->fetch(PDO::FETCH_OBJ);
+$articles = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 //attention pas oublier la gestion des erreurs
 
@@ -17,20 +17,25 @@ $articles = $statement->fetch(PDO::FETCH_OBJ);
 <div class="indexArticles">
   <table class="listeArticles">
     <tr>
+      <th>Image</th>
       <th>Titre</th>
       <th>Contenu</th>
       <th>Date</th>
-      <th>Image</th>
-      <th>Modifier</th>
-      <th>Supprimer</th>
+      <th>Actions</th>
     </tr>
-    <?php foreach ($articles as $value) echo $value; ?>
+    <?php foreach ($articles as $value) {
+    ?>
     <tr>
-      <td><?= $articles->article_titre; ?></td>
-      <td><?= $articles->article_contenu; ?></td>
-      <td><?= $articles->article_date; ?></td>
-      <td><?= $articles->article_image; ?></td>
-      <td><a href="">Modifier</a>
-      <td><a href="">Supprimer</a>
+      <td><?= $value['article_image']; ?></td>
+      <td><?= $value['article_titre']; ?></td>
+      <td><?= $value['article_contenu']; ?></td>
+      <td><?= $value['article_date']; ?></td>
+      <td><a href="">Afficher</a><a href="">Modifier</a><a href="">Supprimer</a>
+      </td>
+    </tr>
+    <?php
+    };
+    ?>
+
   </table>
 </div>
