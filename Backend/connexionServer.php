@@ -34,7 +34,10 @@ if(
                     echo "the user is not exist";
                 }else{
                     //if the user is connected then :
-                    header("Location:../connexion.php?status=success"); 
+                        $userid = $user["user_id"];
+                        var_dump($userid);
+
+                    header("Location:./article/ajouteArticle.php?userid=$userid"); 
 
                 }
        
