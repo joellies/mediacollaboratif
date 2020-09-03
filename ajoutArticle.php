@@ -4,9 +4,9 @@ include_once 'connect.php';
 
 //Message success post article
 if (isset($_POST['article_titre']) && isset($_POST['article_contenu']) && isset($_POST['article_image'])) {
-  echo "Votre article a été publié";
+  echo "";
 } else {
-  echo "Votre article n'a pas été publié";
+  echo "Merci de remplir tous les champs";
 }
 
 //Déclaration des variables
@@ -23,6 +23,9 @@ $sql = 'INSERT INTO articles(article_titre, article_contenu, article_image) VALU
 
 $statement = $conn->prepare($sql);
 
+//Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac & strip tags
+
+
 if ($statement->execute([':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' => $article_image])) {
-  echo 'Ok';
-}
+  echo 'Votre article a été publié';
+} else echo 'Erreur';
