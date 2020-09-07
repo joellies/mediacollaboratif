@@ -30,7 +30,8 @@ h1 {
   flex-direction: row;
 }
 
-.btnModifier {
+.btnModifier,
+.btnLire {
   color: white;
   background-color: #ff870a;
   padding: 10px;
