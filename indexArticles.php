@@ -1,6 +1,6 @@
 <?php
 
-require_once "connect.php";
+require_once "backend/DbConnexion/db.php";
 
 $sql = 'SELECT * FROM articles';
 
@@ -40,11 +40,15 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
   <div class=" listArticles">
 
     <div class="leftContent">
-      <div class="articleImage"><?= $value['article_image']; ?></div>
+      <div class="articleImage">
+      <?php 
+      echo"<embed src='data:".$value["image_type"].";base64,".base64_encode($value['article_image'])."'width='200'/>";  ?>
+      </div>
     </div>
     <div class="rightContent">
       <div class=" articleTitre"><?= $value['article_titre']; ?></div>
       <div class="articleDate"><?= $value['article_date']; ?></div>
+     
       <div class="btnChangeArticle">
         <div class="btnModifier"><a href="">Modifier</a></div>
         <div class="btnSupprimer"><a href="">Supprimer</a></div>

@@ -9,9 +9,9 @@
 <body>
   <h1>Que souhaitez-vous publier aujourd'hui ?</h1>
   <div class="o-formulaireAjoutArticle">
-    <form action="ajoutArticle.php" method="POST">
+    <form action="ajoutArticle.php" method="POST" enctype="multipart/form-data">
       <div class="ajoutTitre">
-        <label for "titre">Titre</label>
+        <label for="titre">Titre</label>
         <input type="text" id="titre" name="article_titre" required>
       </div>
       <div class="ajoutCategorie">
