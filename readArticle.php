@@ -2,6 +2,7 @@
 
 require_once "connect.php";
 
+
 if (isset($_GET['article_id']) && !empty($_GET['article_id'])) {
 
   $article_id = strip_tags($_GET['article_id']);
@@ -25,8 +26,10 @@ if (isset($_GET['article_id']) && !empty($_GET['article_id'])) {
     header('Location: indexArticles.php');
   }
 } else {
-  header('Location: readArticle.php');
+  header('Location: indexArticles.php');
 }
+
+require_once "close.php"
 ?>
 
 <!DOCTYPE html>
