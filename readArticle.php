@@ -2,11 +2,9 @@
 
 require_once "connect.php";
 
+if (isset($_GET['id']) && !empty($_GET['id'])) {
 
-if (isset($_GET['article_id']) && !empty($_GET['article_id'])) {
-
-  $article_id = strip_tags($_GET['article_id']);
-
+  $article_id = strip_tags($_GET['id']);
   // On écrit notre requête
   $sql = 'SELECT * FROM `articles` WHERE `article_id`=:article_id';
 
@@ -17,16 +15,13 @@ if (isset($_GET['article_id']) && !empty($_GET['article_id'])) {
   $statement->bindValue(':article_id', $article_id, PDO::PARAM_INT);
 
   // On exécute la requête
-  $statement->execute();
-
-  // On stocke le résultat dans un tableau associatif
+  $result = $statement->execute();
+  // On stocke le résultat
   $article = $statement->fetch();
 
   if (!$article) {
     header('Location: indexArticles.php');
   }
-} else {
-  header('Location: indexArticles.php');
 }
 
 require_once "close.php"
@@ -52,7 +47,6 @@ require_once "close.php"
   <div class="articleDate"><?= $article['article_date']; ?></div>
   <div class="articleImage"><?= $article['article_image']; ?></div>
   <div class="articleContenu"><?= $article['article_contenu']; ?></div>
-
 </body>
 
 </html>

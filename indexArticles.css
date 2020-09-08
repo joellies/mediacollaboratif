@@ -30,8 +30,11 @@ h1 {
   flex-direction: row;
 }
 
-.btnModifier,
-.btnLire {
+div.articleTitre:hover {
+  color: #ff870a;
+}
+
+.btnModifier {
   color: white;
   background-color: #ff870a;
   padding: 10px;
