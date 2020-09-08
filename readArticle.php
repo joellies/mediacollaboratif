@@ -34,19 +34,27 @@ require_once "close.php"
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Article</title>
-  <link rel="stylesheet" type="text/css" href="indexArticles.css">
+  <link rel="stylesheet" type="text/css" href="articles.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div class="articleContent">
+    <div class="articleID"><?= $article['article_id']; ?></div>
+    <div class="articleCategorie"><?= $article['categorie_nom']; ?></div>
+    <div class="articleTitre"><?= $article['article_titre']; ?></div>
+    <div class="articleAuteur"><?= $article['user_id']; ?></div>
+    <div class="articleDate"><?= $article['article_date']; ?></div>
+    <div class="articleImage"><?= $article['article_image']; ?></div>
+    <div class="articleContenu"><?= $article['article_contenu']; ?></div>
+  </div>
 
-  <div class="articleID"><?= $article['article_id']; ?></div>
-  <div class="articleCategorie"><?= $article['categorie_nom']; ?></div>
-  <div class="articleTitre"><?= $article['article_titre']; ?></div>
-  <div class="articleAuteur"><?= $article['user_id']; ?></div>
-  <div class="articleDate"><?= $article['article_date']; ?></div>
-  <div class="articleImage"><?= $article['article_image']; ?></div>
-  <div class="articleContenu"><?= $article['article_contenu']; ?></div>
+  <footer>
+    <p><a href="">À propos</a></p>
+    <p><a href="">Conditions d'utilisation</a></p>
+    <p><a href="">Contact</a></p>
+    <p>© 2020</p>
+  </footer>
 </body>
 
 </html>

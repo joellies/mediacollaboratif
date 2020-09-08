@@ -3,12 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="articles.css">
   <title>Ajout d'un nouvel article</title>
-  <link rel="" href="">
 </head>
 <body>
-  <h1>Que souhaitez-vous publier aujourd'hui ?</h1>
+  <header>
+    <div class="menuPrincipal">
+      <a href=""><img src="/images/home-icone.svg"></a>
+      <a href=""><img src="/images/rechercher-icone.svg"></a>
+      <a href=""><img src="/images/plus-icone.svg"></a>
+      <a href=""><img src="/images/profil-icone.svg"> </a>
+    </div>
+  </header>
+
   <div class="o-formulaireAjoutArticle">
+  <h1 class="titreAjouterArticle">Que souhaitez-vous publier aujourd'hui ?</h1>
     <form action="ajoutArticle.php" method="POST">
       <div class="ajoutTitre">
         <label for "titre">Titre</label>
@@ -30,6 +39,7 @@
       <div class="ajoutImage">
         <img src="/images/ajout-image-icon.svg">
         <label for="ajout_image">Ajouter une image</label>
+        <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
         <input type="file" name="article_image"  value="ajouter une image" required>
       </div>
       <div class="envoyerArticle" id="submit">
