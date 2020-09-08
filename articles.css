@@ -21,11 +21,34 @@ h1 {
 
 /*Page ajout article*/
 
+.champsTitreCategorie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 83%;
+  margin-bottom: 40px;
+}
+
+.ajoutTitre {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
 h1.titreAjouterArticle {
   font-family: Nunito, sans serif;
   font-size: 36px;
   font-weight: 600;
   color: #002b3d;
+}
+
+.ajoutCategorie {
+  width: 30%;
+}
+
+.ajoutArticleContenu {
+  border-radius: 20px;
+  margin-bottom: 40px;
 }
 
 /*User*/
