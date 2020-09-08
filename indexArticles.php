@@ -47,10 +47,12 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
     <div class="rightContent">
       <div class=" articleTitre"><?= $value['article_titre']; ?></div>
       <div class="articleDate"><?= $value['article_date']; ?></div>
-      <div class="btnChangeArticle">
-        <div class="btnModifier"><a href="modifier-article.php?id=<? $articles->id?>">Modifier</a>
+
+      <div class=" btnChangeArticle">
+        <div class="btnLire"><a href="readArticle.php?id=<?= $value['article_id'] ?>">Lire</a></div>
+        <div class="btnModifier"><a href=".php?id=<?= $value['article_id'] ?>">Modifier</a>
         </div>
-        <div class="btnSupprimer"><a href="supprimer-article.php?id=<? $articles->id?>">Supprimer</a></div>
+        <div class="btnSupprimer"><a href=".php?id=<?= $value['article_id'] ?>">Supprimer</a></div>
       </div>
     </div>
   </div>

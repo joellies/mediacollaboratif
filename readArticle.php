@@ -2,15 +2,31 @@
 
 require_once "connect.php";
 
-$id = strip_tags($_GET['article_id']);
+if (isset($_GET['article_id']) && !empty($_GET['article_id'])) {
 
-$sql = 'SELECT * FROM articles WHERE article_id=:article_id';
+  $article_id = strip_tags($_GET['article_id']);
 
-$statement = $conn->prepare($sql);
+  // On écrit notre requête
+  $sql = 'SELECT * FROM `articles` WHERE `article_id`=:article_id';
 
-$statement->execute(['article_id' => $id]);
+  // On prépare la requête
+  $statement = $conn->prepare($sql);
 
-$article = $statement->fetchAll();
+  // On attache les valeurs
+  $statement->bindValue(':article_id', $article_id, PDO::PARAM_INT);
+
+  // On exécute la requête
+  $statement->execute();
+
+  // On stocke le résultat dans un tableau associatif
+  $article = $statement->fetch();
+
+  if (!$article) {
+    header('Location: indexArticles.php');
+  }
+} else {
+  header('Location: readArticle.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,17 +38,18 @@ $article = $statement->fetchAll();
   <title>Article</title>
   <link rel="stylesheet" type="text/css" href="indexArticles.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-  <div class="articleID"></div>
-  <div class="articleCategorie"></div>
-  <div class="articleTitre"></div>
-  <div class="articleAuteur"></div>
-  <div class="articleDate"></div>
-  <div class="articleImage"></div>
-  <div class="articleContenu"></div>
+
+  <div class="articleID"><?= $article['article_id']; ?></div>
+  <div class="articleCategorie"><?= $article['categorie_nom']; ?></div>
+  <div class="articleTitre"><?= $article['article_titre']; ?></div>
+  <div class="articleAuteur"><?= $article['user_id']; ?></div>
+  <div class="articleDate"><?= $article['article_date']; ?></div>
+  <div class="articleImage"><?= $article['article_image']; ?></div>
+  <div class="articleContenu"><?= $article['article_contenu']; ?></div>
+
 </body>
 
 </html>
