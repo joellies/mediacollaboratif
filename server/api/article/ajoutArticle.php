@@ -31,6 +31,6 @@ $statement = $conn->prepare($sql);
 
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
 
-if ($statement->execute([':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' => $image_data , 'image_type' => $image_type])) {
+if ($statement->execute([':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' => $image_data, 'image_type' => $image_type])) {
   echo $message = 'Votre article a été publié';
 }

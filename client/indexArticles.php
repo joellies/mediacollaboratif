@@ -21,8 +21,8 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Index articles</title>
-  <link rel="stylesheet" type="text/css" href="indexArticles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/css/articles.css>
+  href=" https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -37,31 +37,29 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
   <?php foreach ($articles as $value) {
   ?>
 
-  <div class=" listArticles">
+    <div class=" listArticles">
 
-    <div class="leftContent">
-      <div class="articleImage">
-      <?php 
-      echo"<embed src='data:".$value["image_type"].";base64,".base64_encode($value['article_image'])."'width='200'/>";  ?>
+      <div class="leftContent">
+        <div class="articleImage">
+          <?php
+          echo "<embed src='data:" . $value["image_type"] . ";base64," . base64_encode($value['article_image']) . "'width='200'/>";  ?>
+        </div>
+      </div>
+      <div class="rightContent">
+        <div class=" articleTitre"><?= $value['article_titre']; ?></div>
+        <div class="articleDate"><?= $value['article_date']; ?></div>
+
+        <div class="btnChangeArticle">
+          <div class="btnModifier"><a href="">Modifier</a></div>
+          <div class="btnSupprimer"><a href="">Supprimer</a></div>
+        </div>
       </div>
     </div>
-    <div class="rightContent">
-      <div class=" articleTitre"><?= $value['article_titre']; ?></div>
-      <div class="articleDate"><?= $value['article_date']; ?></div>
-     
-      <div class="btnChangeArticle">
-        <div class="btnModifier"><a href="">Modifier</a></div>
-        <div class="btnSupprimer"><a href="">Supprimer</a></div>
-      </div>
     </div>
-  </div>
-  </div>
   <?php
   };
   ?>
   </div>
 </body>
-
-</html>
 
 </html>
