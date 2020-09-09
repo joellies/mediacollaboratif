@@ -2,13 +2,15 @@
 /**
  * @rachel
  */
+require "../../db/db.php";
+
 
 if(isset($_GET['id']) && !empty($_GET['id'])){
     $id = strip_tags($_GET['id']);
 
-    $sql = "DELETE FROM `articles` WHERE `id`=:id;";
+    $sql = "DELETE FROM `articles` WHERE `article_id`=:id;";
 
-    $query = $db->prepare($sql);
+    $query = $conn->prepare($sql);
 
     $query->bindValue(':id', $id, PDO::PARAM_INT);
     $query->execute();
@@ -16,5 +18,5 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 echo "DELETED";
 }
 
-require_once('close.php');
-
+/* require_once('close.php');
+ */
