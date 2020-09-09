@@ -1,20 +1,20 @@
 <?php
+/**
+ * @rachel
+ */
 
-require_once "../db/db.php"; 
+if(isset($_GET['id']) && !empty($_GET['id'])){
+    $id = strip_tags($_GET['id']);
 
-if(isset($_POST["article_id"]))
-{
-    $sql = "DELETE FROM `ARTICLES` WHERE  `article_id` =:aritcleid";
+    $sql = "DELETE FROM `articles` WHERE `id`=:id;";
 
-    $stmt = $prepare($sql);
+    $query = $db->prepare($sql);
 
-    $executeSql = [
-        ":articleid" => $article_id
-    ]
-    $res = $stmt->execute($executeSql);
+    $query->bindValue(':id', $id, PDO::PARAM_INT);
+    $query->execute();
 
-    var_dump($res);
+echo "DELETED";
 }
 
-
+require_once('close.php');
 
