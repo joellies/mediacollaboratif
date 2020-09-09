@@ -18,7 +18,7 @@
 
   <div class="o-formulaireAjoutArticle">
   <h1 class="titreAjouterArticle">Que souhaitez-vous publier aujourd'hui ?</h1>
-    <form action="ajoutArticle.php" method="POST">
+    <form action="ajoutArticle.php" method="POST" enctype="multipart/form-data">
       <div class="champsTitreCategorie">
       <div class="ajoutTitre">
         <label for "titre">Titre</label>
@@ -41,7 +41,6 @@
       <div class="ajoutImage">
         <img src="/images/ajout-image-icon.svg">
         <label for="ajout_image"></label>
-        <input type="hidden" name="MAX_FILE_SIZE" value="250000" />
         <input type="file" name="article_image" required>
       </div>
       <div class="envoyerArticle" id="submit">
