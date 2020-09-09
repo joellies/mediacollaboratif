@@ -3,6 +3,11 @@ body {
   color: #002b3d;
 }
 
+.ajoutArticleMainContent {
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
 /*Titres*/
 
 h1 {
@@ -25,14 +30,15 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 83%;
+  width: 90%;
   margin-bottom: 40px;
 }
 
-.ajoutTitre {
+.ajoutTitreArticle {
   display: flex;
   width: 50%;
   flex-direction: column;
+  padding: 10px;
 }
 
 h1.titreAjouterArticle {
@@ -40,16 +46,94 @@ h1.titreAjouterArticle {
   font-size: 36px;
   font-weight: 600;
   color: #002b3d;
+  margin-bottom: 30px;
 }
 
-.ajoutCategorie {
-  width: 30%;
+.ajoutArticleCategorie {
+  width: 40%;
+  padding: 10px;
 }
 
 .ajoutArticleContenu {
   border-radius: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  padding: 10px;
 }
+
+.champContenu {
+  border-radius: 20px;
+  border: solid 1px #002b3d;
+}
+
+.champContenu:focus {
+  border-bottom: 2px solid #002b3d;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+input[type='text'] {
+  border: none;
+  border-bottom: 1px solid #002b3d;
+  outline: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+input[type='text']:focus {
+  border: solid 2px #002b3d;
+  transition: 0.5s;
+}
+
+select {
+  width: 56%;
+  font-family: Nunito, sans serif;
+  color: #002b3d;
+  font-size: 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.ajoutImage {
+  width: 43%;
+  float: right;
+}
+
+/*Boutons*/
+
+div.btnAjoutArticle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  width: 70%;
+  padding: 10px;
+}
+
+.annulerArticle {
+  color: white;
+  background-color: #828d92;
+  padding: 12px;
+  border-radius: 20px;
+  width: 100px;
+  margin-top: 20px;
+  border: 0px;
+  text-align: center;
+}
+
+.btnPublierArticle {
+  color: white;
+  font-family: Nunito, sans-serif;
+  font-size: 16px;
+  background-color: #ff870a;
+  padding: 12px;
+  border-radius: 20px;
+  width: 120px;
+  margin-top: 20px;
+  border: 0px;
+}
+
+/*Page index articles*/
 
 /*User*/
 
@@ -76,6 +160,8 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /*Image*/
@@ -110,11 +196,6 @@ hr {
   margin-bottom: 15px;
 }
 
-.btnChangeArticle {
-  display: flex;
-  flex-direction: row;
-}
-
 div.detailsArticleTitre:hover {
   color: #ff870a;
 }
@@ -123,7 +204,7 @@ div.detailsArticleTitre:hover {
 
 .btnChangeArticle {
   display: flex;
-  width: 35%;
+  width: 50%;
   justify-content: space-between;
 }
 
@@ -175,6 +256,7 @@ footer {
   line-height: 90%;
   font-size: 12px;
   padding: 15px;
+  margin-top: 10px;
 }
 
 footer p {

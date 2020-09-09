@@ -33,14 +33,17 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
     <a href=""><img src="/images plus-icon.png"></a>
     <a href=""><img src="/images/profile-icon.png"> </a>
   </div>
-  <h1>Liste des articles</h1>
+  <div class="userInfo">
+    <div class="userImage"><img src="/images/Jane-Doe.png"></div>
+    <div class="lienModifierProfil"><a href="">Modifier profil</a></div>
+  </div>
+  <hr width="40%" size="2">
   <?php foreach ($articles as $value) {
   ?>
-
   <div class=" listeArticles">
     <div class="imageContent">
       <?php
-        echo "<embed src='data:" . $value["image_type"] . ";base64," . base64_encode($value['article_image']) . "'width='200'/>";  ?>
+        echo "<embed src='data:" . $value["image_type"] . ";base64," . base64_encode($value['article_image']) . "'width='250'/>";  ?>
     </div>
     <div class="detailsContent">
       <a class="hoverArticle" href="..\server\article\readArticle.php?id=<?= $value['article_id']; ?>">
