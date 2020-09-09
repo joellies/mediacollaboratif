@@ -4,7 +4,7 @@ require_once('connect.php');
 if(isset($_GET['id']) && !empty($_GET['id'])){
     $id = strip_tags($_GET['id']);
 
-    $sql = "DELETE FROM `article` WHERE `id`=:id;";
+    $sql = "DELETE FROM `articles` WHERE `id`=:id;";
 
     $query = $db->prepare($sql);
 

@@ -1,0 +1,139 @@
+Body{
+    background-color:#FFFFFF;
+}
+h1{
+    color:#002B3D ;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: nunito;
+    padding-left: 70px;
+}
+h2{
+    color:#002B3D ;
+    font-size: 25px;
+    font-family: nunito;
+}
+h3{
+    color:#002B3D ;
+    font-size: 25px;
+    font-family: nunito;
+}
+p{
+    color:#002B3D ;
+    font-size: 16px;
+    font-family: nunito;
+}
+.TextSuppr{
+    
+    margin-top: 150px;
+    margin-bottom: 90px;
+    margin-left: 30px;
+    margin-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 5px;
+    font-family: nunito;
+}
+
+.boutton{
+    display: flex;
+    flex-direction: row;
+}
+
+.BoutSuppr{
+    background-color:#FF870A ;
+    color:#FFFFFF ;
+    font-size: 20px;
+    font-family: nunito;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 9px;
+    margin-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-radius: 45px;
+    
+}
+.BoutAnnuler{
+    color:#002B3D  ;
+    font-size: 20px;
+    margin-right: 50px;
+    font-family: nunito;
+}
+
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    Body{
+        background-color:#FFFFFF;
+    }
+    h1{
+        color:#002B3D ;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: nunito;
+    }
+    h2{
+        color:#002B3D ;
+        font-size: 25px;
+        font-family: nunito;
+    }
+    h3{
+        color:#002B3D ;
+        font-size: 25px;
+        font-family: nunito;
+    }
+    p{
+        color:#002B3D ;
+        font-size: 25px;
+        font-family: nunito;
+    }
+    .textSuppr{
+        margin-top: 150px;
+        margin-bottom: 90px;
+        margin-left: 350px;
+        margin-right: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 250px;
+        padding-right: 50px;
+        font-family: nunito;
+    }
+    
+    .boutton{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .btnSuppr{
+        background-color:#FF870A ;
+        color:FFFFFF ;
+        font-size: 24px;
+        font-family: nunito;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 950px;
+        margin-left: 150px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 10px;
+        border-radius: 45px;
+        font-family: nunito;
+    }
+    .btnAnnuler{
+        color:#002B3D  ;
+        font-size: 24px;
+        margin-right: 50px;
+        font-family: nunito;
+    }
+    footer{
+        background-color:#002B3D  ;
+        color:#FFFFFF;
+    }
+}
