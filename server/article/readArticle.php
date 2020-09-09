@@ -47,8 +47,10 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     <div class="articleAuteur"><?= $article['user_id']; ?></div>
     <div class="articleDate"><?= $article['article_date']; ?></div>
 
-    <div class="articleImage"><?php
-        echo "<embed src='data:" . $article["image_type"] . ";base64," . base64_encode($article['article_image']) . "'width='400'/>";  ?></div>
+    <div class="articleImage">
+      <?php
+        echo "<embed src='data:" . $article["image_type"] . ";base64," . base64_encode($article['article_image']) . "'width='400'/>";  ?>
+    </div>
     <div class="articleContenu"><?= $article['article_contenu']; ?></div>
   </div>
 
