@@ -43,7 +43,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
         echo "<embed src='data:" . $value["image_type"] . ";base64," . base64_encode($value['article_image']) . "'width='200'/>";  ?>
     </div>
     <div class="detailsContent">
-      <a class="hoverArticle" href="\server\api\article\readArticle.php?id=<?= $value['article_id']; ?>">
+      <a class="hoverArticle" href="..\server\article\readArticle.php?id=<?= $value['article_id']; ?>">
         <div class="detailsArticleTitre"><?= $value['article_titre']; ?></div>
       </a>
       <div class="detailsArticleDate"><?= $value['article_date']; ?></div>

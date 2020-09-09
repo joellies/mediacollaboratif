@@ -1,6 +1,6 @@
 <?php
 
-require_once "../../../db/db.php";
+require_once "../../db/db.php";
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
@@ -24,8 +24,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
   }
 }
 
-require_once "close.php"
-?>
+/* s */?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -46,7 +45,9 @@ require_once "close.php"
     <div class="articleTitre"><?= $article['article_titre']; ?></div>
     <div class="articleAuteur"><?= $article['user_id']; ?></div>
     <div class="articleDate"><?= $article['article_date']; ?></div>
-    <div class="articleImage"><?= $article['article_image']; ?></div>
+
+    <div class="articleImage"><?php
+        echo "<embed src='data:" . $article["image_type"] . ";base64," . base64_encode($article['article_image']) . "'width='200'/>";  ?></div>
     <div class="articleContenu"><?= $article['article_contenu']; ?></div>
   </div>
 
