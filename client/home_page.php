@@ -1,6 +1,6 @@
 <?php
 
-require_once "backend/DbConnexion/db.php";
+require_once "../db/db.php";
 
 $sql = 'SELECT * FROM articles';
 

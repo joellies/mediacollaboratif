@@ -1,6 +1,6 @@
 <?php
 
-include_once 'Backend/DbConnexion/db.php';
+include_once '../../../db/db.php';
 $message = '';
 
 //Message success post article
