@@ -46,7 +46,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
       <div class=" articleTitre"><?= $value['article_titre']; ?></div>
       <div class="articleDate"><?= $value['article_date']; ?></div>
       <div class="btnChangeArticle">
-        <div class="btnModifier"><a href="">Modifier</a></div>
+        <div class="btnModifier"><a href="modifierArticles.php?<?= $articles['id'] ?>">Modifier</a></div>
         <div class="btnSupprimer"><a href="">Supprimer</a></div>
       </div>
     </div>
