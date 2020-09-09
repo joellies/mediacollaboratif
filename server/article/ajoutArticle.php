@@ -24,7 +24,6 @@ $article_contenu = strip_tags($_POST['article_contenu']);
 $sql = 'INSERT INTO articles(article_titre, article_contenu, article_image, image_type) VALUES(:article_titre, :article_contenu, :article_image , :image_type)';
 
 //Prepare
-
 $statement = $conn->prepare($sql);
 
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
