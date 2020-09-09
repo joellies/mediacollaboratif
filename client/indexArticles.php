@@ -50,7 +50,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
 
       <div class="btnChangeArticle">
         <div class="btnModifier"><a href="">Modifier</a></div>
-        <div class="btnSupprimer"><a href="">Supprimer</a></div>
+        <div class="btnSupprimer"><a href="../server/article/Delete_article.php?id=<?=$value['article_id'];?>">Supprimer</a></div>
       </div>
     </div>
   </div>
