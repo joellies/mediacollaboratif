@@ -1,6 +1,6 @@
 <?php
 
-require_once "db/db.php";
+require_once "../../../db/db.php";
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
@@ -35,7 +35,8 @@ require_once "close.php"
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Article</title>
   <link rel="stylesheet" type="text/css" href="./assets/css/articles.css">
-  <link href=" https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
+  <link href=" https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
