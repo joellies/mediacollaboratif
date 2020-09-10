@@ -27,12 +27,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-  <div class="menu">
-    <a href=""><img src="/images/home-icon.png"></a>
-    <a href=""><img src="/images/rechercher-icone.png"></a>
-    <a href=""><img src="/images plus-icon.png"></a>
-    <a href=""><img src="/images/profile-icon.png"> </a>
-  </div>
+  <?php include "../header.html"; ?>
   <div class="userInfo">
     <div class="userImage"><img src="/images/Jane-Doe.png"></div>
     <div class="lienModifierProfil"><a href="">Modifier profil</a></div>

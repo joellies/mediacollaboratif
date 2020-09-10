@@ -13,21 +13,47 @@
 
   <body>
     <header class="mainHeader">
-    <div class="header_logo">
-      <img src="assets/images/logo.svg" />
-    </div>
-    <div class="header_mainMenu">
-      <a><img src="assets/images/home-icone.svg" /></a>
-      <a><img src="assets/images/rechercher-icone.svg" /></a>
-      <a><img src="assets/images/plus-icone.svg" /></a>
-      <a><img src="assets/images/profil-icone.svg" /></a>
-    </div>
-    <div class="header_menuUser">
-      <div class="header_menuUser_connexion">
-        <a href="server/user/connexionLogin.php">Se connecter</a>
+      <div class="header_logo">
+        <img
+          src="http://localhost:8000/mediacollaboratif/assets/images/logo.svg"
+        />
       </div>
-      <a href="client/inscription.php">S'inscrire</div></a>
-    </div>
-  </header>
+      <div class="header_mainMenu">
+        <a href="http://localhost:8000/mediacollaboratif/landing.php">
+          <img
+            src="http://localhost:8000/mediacollaboratif/assets/images/home-icone.svg"
+          />
+        </a>
+        <a>
+          <img
+            src="http://localhost:8000/mediacollaboratif/assets/images/rechercher-icone.svg"
+          />
+        </a>
+        <a
+          href="http://localhost:8000/mediacollaboratif/client/formAjoutArticle.php"
+        >
+          <img
+            src="http://localhost:8000/mediacollaboratif/assets/images/plus-icone.svg"
+          />
+        </a>
+        <a
+          href="http://localhost:8000/mediacollaboratif/client/indexArticles.php"
+        >
+          <img
+            src="http://localhost:8000/mediacollaboratif/assets/images/profil-icone.svg"
+          />
+        </a>
+      </div>
+      <div class="header_menuUser">
+        <div class="header_menuUser_connexion">
+          <a class="header_btnConnexion" href="server/user/connexionLogin.php">
+            Se connecter
+          </a>
+        </div>
+        <a class="header_btnInscription" href="client/inscription.php">
+          <div class="header_menuUser_inscription">S'inscrire</div>
+        </a>
+      </div>
+    </header>
   </body>
 </html>

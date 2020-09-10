@@ -139,6 +139,10 @@ div.btnAjoutArticle {
   border: 0px;
 }
 
+a.btnAnnulerArticle {
+  color: white;
+}
+
 /*Page index articles*/
 
 /*User*/
@@ -283,6 +287,7 @@ footer p {
   margin-top: 50px;
   font-size: 18px;
   line-height: 140%;
+  text-align: justify;
 }
 
 /*Footer*/
@@ -302,11 +307,41 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .header_mainMenu {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   flex-direction: row;
-  width: 25%;
+  width: 30%;
+}
+
+/*Boutons*/
+
+.header_menuUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+}
+
+.header_btnConnexion {
+  color: #002b3d;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.header_menuUser_inscription {
+  background-color: #ff870a;
+  color: white;
+  padding: 13px;
+  width: 100px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
 }

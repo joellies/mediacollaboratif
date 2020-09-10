@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/articles.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
+<?php include('../header.html'); ?>
 
 <body>
   <div class="ajoutArticleMainContent">
