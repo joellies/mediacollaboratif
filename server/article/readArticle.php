@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @joellie
  */
@@ -26,7 +27,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
   }
 }
 
-/* s */?>
+/* s */ ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -49,17 +50,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     <div class="articleImage">
       <?php
-        echo "<embed src='data:" . $article["image_type"] . ";base64," . base64_encode($article['article_image']) . "'width='400'/>";  ?>
+      echo "<embed src='data:" . $article["image_type"] . ";base64," . base64_encode($article['article_image']) . "'width='400'/>";  ?>
     </div>
     <div class="articleContenu"><?= $article['article_contenu']; ?></div>
   </div>
 
-  <footer>
-    <p><a href="">À propos</a></p>
-    <p><a href="">Conditions d'utilisation</a></p>
-    <p><a href="">Contact</a></p>
-    <p>© 2020</p>
-  </footer>
+  <?php include('../../footer.html'); ?>
 </body>
 
 </html>

@@ -16,6 +16,10 @@ h1 {
   color: #002b3d;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Menu*/
 
 .menuPrincipal {
@@ -66,9 +70,10 @@ h1.titreAjouterArticle {
 }
 
 .champContenu:focus {
-  border-bottom: 2px solid #002b3d;
+  border: 2px solid #002b3d;
   border-radius: 20px;
-  transition: 0.5s;
+  outline: none;
+  padding: 10px;
 }
 
 input[type='text'] {
@@ -80,8 +85,9 @@ input[type='text'] {
 }
 
 input[type='text']:focus {
-  border: solid 2px #002b3d;
+  border-bottom: solid 2px #002b3d;
   transition: 0.5s;
+  outline: none;
 }
 
 select {
@@ -186,6 +192,7 @@ hr {
   font-size: 22px;
   line-height: 140%;
   margin-bottom: 15px;
+  text-decoration: none;
 }
 
 .detailsArticleDate {
@@ -240,23 +247,11 @@ div.detailsArticleTitre:hover {
   border-radius: 20px;
 }
 
-a {
+footer a {
   text-decoration: none;
   font-family: Nunito;
   font-weight: 600;
   color: white;
-}
-
-/*Footer*/
-
-footer {
-  background-color: #002b3d;
-  background-color: #002b3d;
-  color: white;
-  line-height: 90%;
-  font-size: 12px;
-  padding: 15px;
-  margin-top: 10px;
 }
 
 footer p {
@@ -288,4 +283,30 @@ footer p {
   margin-top: 50px;
   font-size: 18px;
   line-height: 140%;
+}
+
+/*Footer*/
+
+footer {
+  background-color: #002b3d;
+  background-color: #002b3d;
+  color: white;
+  line-height: 90%;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/*Header*/
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_mainMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 25%;
 }
