@@ -76,15 +76,20 @@ h1.titreAjouterArticle {
   padding: 10px;
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='password'],
+input[type='email'] {
   border: none;
   border-bottom: 1px solid #002b3d;
   outline: none;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px;
 }
 
-input[type='text']:focus {
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus {
   border-bottom: solid 2px #002b3d;
   transition: 0.5s;
   outline: none;
@@ -343,5 +348,118 @@ footer {
   border-radius: 20px;
   text-align: center;
   font-size: 18px;
+  font-weight: 600;
+}
+
+/*Paramètres*/
+
+.backgroundParametres {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(116.65deg, rgba(0, 43, 61, 0.16) 3.43%, #002b3d 100%),
+    #ffffff;
+}
+
+.parametres_mainContent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 40%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: Nunito, sans serif;
+  background-color: white;
+  box-shadow: 0px 10px 10px rgba(130, 141, 146, 0.25);
+  border-radius: 40px;
+}
+
+.cercle_userImage {
+  border-radius: 100%;
+  border: 1px solid #002b3d;
+  display: flex;
+  justify-content: center;
+  max-width: 120px;
+  max-height: 120px;
+  margin-bottom: 20px;
+}
+
+.parametres_userImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img.userImage {
+  max-width: 80px;
+  max-height: 80px;
+  padding: 30px;
+}
+
+.parametres_modifierImage a {
+  margin-top: 20px;
+  color: #ff870a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.parametres_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.parametres_prenom,
+.parametres_nom,
+.parametres_email,
+.parametres_motDePasse {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+}
+
+.parametres_suppression {
+  margin-top: 20px;
+}
+
+.link_suppression {
+  text-decoration: underline;
+  color: #ff870a;
+  font-weight: 600;
+}
+
+/*Boutons*/
+
+.btn_param {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.btn_annuler {
+  color: #002b3d;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn_enregistrer {
+  background-color: #ff870a;
+  font-family: Nunito, sans serif;
+  font-size: 16px;
+  padding: 13px;
+  border: none;
+  border-radius: 20px;
+  color: white;
   font-weight: 600;
 }
