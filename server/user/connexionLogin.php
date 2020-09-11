@@ -1,6 +1,6 @@
 <?php
 //inclure le fichier de connexion pour appliquer les requet sql sur ce db
-require_once "DbConnexion/db.php";
+require_once "../../db/db.php";
 
 //isset() va retourner FALSE(0) si la variable est NULL.
 if (

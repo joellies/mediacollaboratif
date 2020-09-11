@@ -1,5 +1,5 @@
 <?php
-include_once "connect.php";
+include_once "../../db/db.php";
 
 $id = $_GET["id"];
 $titre = $_GET["article_titre"];
