@@ -8,7 +8,10 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/articles.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<?php include('../header.html'); ?>
+
+<?php 
+define("PATH","../");
+require PATH.'includes/header.php'; ?>
 
 <body>
   <div class="ajoutArticleMainContent">
@@ -37,7 +40,7 @@
             spellcheck="true" minlength="200"></textarea>
         </div>
         <div class="ajoutImage">
-          <img src="/images/ajout-image-icon.svg">
+          <img src="../assets/images/ajout-image-icon.svg">
           <input class="choisirFichier" type="file" name="article_image" value="ajouter une image" required>
         </div>
         <div class="btnAjoutArticle">
@@ -51,7 +54,7 @@
       </form>
     </div>
   </div>
-  <?php include('../footer.html'); ?>
+  <?php require PATH.'includes/footer.php'; ?>
 </body>
 
 </html>

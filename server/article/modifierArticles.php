@@ -1,15 +1,20 @@
 <?php
 include_once "../../db/db.php";
-
-$id = $_GET["id"];
-$titre = $_GET["article_titre"];
-$contenu = $_GET["article_contenu"];
+if (isset($_POST['article_contenu']) && isset($_POST['id']) && isset($_POST['article_titre'])) {
+  $id = $_POST["id"];
+$titre = $_POST["article_titre"];
+$contenu = $_POST["article_contenu"];
 
 $sql = "UPDATE `articles` SET  `article_titre` = :article_titre,`article_contenu` = :article_contenu WHERE `articles`.`article_id` = :id";
 //prepare la requette
 $statment = $conn->prepare($sql);
 $resul = $statment->execute(["article_titre" => $titre, "article_contenu" => $contenu, "article_id" => $id]);
 var_dump($resul);
+
+} else {
+  echo "Merci de remplir tous les champs";
+}
+
 
 ?>
 

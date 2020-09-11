@@ -7,8 +7,10 @@ if (
   !isset($_POST["userMdp"],
   $_POST["userMail"])
 ) {
-  header("Location:../connexion.php?status=100");
+  echo "the  is not exist";
+
 } else {
+
   //avant d'inserer nos données on doit verifer si les varaible global POST n'est pas vide
 
   if (
@@ -24,15 +26,20 @@ if (
                 AND user_mdp=:user_mdp");
       $stmt->execute(['user_email' => $userMail, 'user_mdp' => $userMdp]);
       $user = $stmt->fetch();
+      var_dump($user);
 
       if (!$user) {
-        echo "the user is not exist";
+
       } else {
         //if the user is connected then :
         $userid = $user["user_id"];
-        var_dump($userid);
 
-        header("Location:./article/ajouteArticle.php?userid=$userid");
+        session_start();
+
+        $_SESSION["username"] = $user["user_nom"]." ".$user["user_prenom"] ;
+        $_SESSION["user_id"] = $userid;
+
+        header("Location: ../../client/indexArticles.php?userid=$userid");
       }
     } catch (PDOException $e) {
 

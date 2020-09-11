@@ -38,7 +38,7 @@ if (
       //executer la requet
       $stmt->execute();
 
-      header("Location:../inscription.html?status=200");
+      header("Location:../../homepage.php?status=200");
     } catch (PDOException $e) {
 
       echo $e->getMessage();

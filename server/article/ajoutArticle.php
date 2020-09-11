@@ -1,5 +1,7 @@
 <?php
+session_start();
 
+var_dump($_SESSION);
 include_once '../../db/db.php';
 
 $message = '';
@@ -22,8 +24,8 @@ $article_contenu = strip_tags($_POST['article_contenu']);
 */
 //Insertion données dans DB
 
-$sql = 'INSERT INTO articles(article_titre, article_contenu, article_image, image_type) VALUES(:article_titre,
-:article_contenu, :article_image , :image_type)';
+$sql = 'INSERT INTO articles(article_titre, article_contenu, article_image_data, article_image_type ,user_id) VALUES(:article_titre,
+:article_contenu, :article_image , :image_type , :user_id)';
 
 //Prepare
 $statement = $conn->prepare($sql);
@@ -31,6 +33,6 @@ $statement = $conn->prepare($sql);
 //Execute et afficher // Attention ne pas oublier de sécuriser avec specialcharac
 
 if ($statement->execute([':article_titre' => $article_titre, ':article_contenu' => $article_contenu, ':article_image' =>
-$image_data, 'image_type' => $image_type])) {
+$image_data, 'image_type' => $image_type, 'user_id' => $_SESSION["user_id"]])) {
   echo $message = 'Votre article a été publié';
 }

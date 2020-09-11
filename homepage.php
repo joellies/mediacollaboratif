@@ -10,7 +10,20 @@
 </head>
 
 <body>
-  <?php include "header.html"; ?>
+  <?php
+  define("PATH","./"); 
+  include PATH."includes/header.php"; 
+  require_once "./db/db.php";
+
+  $sql = 'SELECT * FROM articles ORDER BY article_date DESC';
+
+$statement = $conn->prepare($sql);
+
+$statement->execute();
+
+$articles = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+  ?>
   <div class="container">
     <div class="container__mainContent">
       <div class="container__mainContent--destop">
@@ -27,7 +40,7 @@
               <div class="datePublication">28 Aout 2020</div>
             </div>
             <div class="container__mainContent__destop__colonne1--image">
-              <img class="article" src="images/Image-article-1-landing-page.png" />
+              <img class="article" src="assets/images/Image-article-1-landing-page.png" />
               <div class="cercle">
                 <img class="auteur" src="assets/images/John-Doe.png" />
               </div>
@@ -44,7 +57,7 @@
               <date>26 Aout 2020</date>
             </div>
             <div class="container__mainContent__destop__colonne2--image">
-              <img class="article" src="images/Image-article-2-landing-page.png" />
+              <img class="article" src="assets/images/Image-article-2-landing-page.png" />
               <div class="cercle">
                 <img class="auteur" src="assets/images/Jane-Doe.png" />
               </div>
@@ -69,22 +82,25 @@
         </div>
       </aside>
       <div class="container__mainContent--articles">
+        <!--  -->
         <div class="container__mainContent__articles--first">
+
           <img src="assets/images/Image-article-3-landing-page.png" />
           <div class="description">
-            <h2 class="titre"><a href="#">Collaboration</a></h2>
+            <h2 class="titre"><a href="#"><?= $articles[0]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
-              Comment bien diriger une réunion d’équipe ?
+            <?= $articles[0]["article_titre"] ?>
             </p>
             <div class="description--sections">
               <a href="#">
                 <img src="assets/images/John-Doe.png" alt="profil de John-Doe" />
               </a>
-              <date>28 aout 2020</date>
+              <date><?= $articles[0]["article_date"] ?></date>
               <a class="categorie" href="#">Catégorie</a>
             </div>
           </div>
-        </div>
+        </div> 
+      <!-- -->
         <div class="container__mainContent__articles--first">
           <img src="assets/images/Image-article-4-landing-page.png" />
           <div class="description">
@@ -153,7 +169,7 @@
       </div>
     </div>
   </div>
-  <?php include "footer.html"; ?>
+  <?php include "./includes/footer.php"; ?>
 </body>
 
 </html>

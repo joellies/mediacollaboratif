@@ -25,14 +25,14 @@
       </div>
       <h2>Inscrivez-vous, c'est gratuit!</h2>
       <div class="container__mainContent--formulaire">
-        <form method="post" action="traitement.php">
+        <form method="post" action="../server/user/inscription.php">
           <input type="text" id="firstname" name="userFirstname" placeholder="Prénom" required />
           <br />
           <input type="text" id="name" name="userName" placeholder="Nom" required />
           <br />
           <input type="email" id="email" name="userMail" placeholder="Adresse e-mail" required />
           <br />
-          <input type="password" id="password" name="userPassword" placeholder="Mot de passe" minlength="8" required />
+          <input type="password" id="password" name="userPassword" placeholder="Mot de passe" minlength="4" required />
           <br />
           <input type="password" id="confirmPassword" name="userPassword" placeholder="Vérifier votre mot de passe"
             required />
@@ -44,12 +44,15 @@
               <a href="#">les conditions d'utilisations</a>
             </label>
           </div>
-        </form>
-        <div class="container__mainContent--buttons">
-          <button class="annuler" type="submit">Annuler</button>
-          <button class="inscription" type="submit" onclick="landing.html">
+           <div class="container__mainContent--buttons">
+           <button class="inscription" type="submit" >
             S'inscrire
           </button>
+        <button class="annuler" formaction="../homepage.php" type="submit">Annuler</button>
+          
+        </form>
+      
+      
         </div>
       </div>
     </div>

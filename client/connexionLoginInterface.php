@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../server/user/connexionLogin.php">
-        <input type="text" name="email">
-        <input type="password" name="pwd">
+    <form method="POST" action="../server/user/connexionLogin.php">
+        <input type="text" name="userMail">
+        <input type="password" name="userMdp">
         <input type="submit" name="submit" value="Login">
     </form>
 </body>
