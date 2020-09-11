@@ -1,1 +1,4 @@
-Base de données : meco.v3.sql
+Lancer laragon
+Lancer vscode
+
+Base de données : meco.v4.sql
