@@ -6,4 +6,4 @@
       Joellie          -           Ziadoon          -          Virginie         -         Rachel
 
 
-Visitez Notre siteWeb en ligne [Meco](http://github.com)
+Visitez Notre siteWeb en ligne [Meco](http://localhost/mediaMeco/landingPage.php)
