@@ -27,10 +27,10 @@ require PATH.'includes/header.php'; ?>
           <div class="ajoutArticleCategorie">
             <label for="categorie">Catégorie</label></br>
             <select id="categorie" name="categorie_nom">
-              <option value="1">Collaboration</option>
-              <option value="4">Créativité</option>
-              <option value="2">Design</option>
-              <option value="3">Web développement</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Créativité">Créativité</option>
+              <option value="Design">Design</option>
+              <option value="développement">Web développement</option>
             </select>
           </div>
         </div>

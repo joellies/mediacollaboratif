@@ -41,6 +41,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2px;
 }
 .container__mainContent__articles--first img {
   width: 35%;

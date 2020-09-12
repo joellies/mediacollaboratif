@@ -45,17 +45,16 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
   <div class="articleContent">
     <div class="articleCategorie"><?= $article['categorie_nom']; ?></div>
     <div class="articleTitre"><?= $article['article_titre']; ?></div>
-    <div class="articleAuteur"><?= $article['user_id']; ?></div>
     <div class="articleDate"><?= $article['article_date']; ?></div>
 
     <div class="articleImage">
       <?php
-      echo "<embed src='data:" . $article["image_type"] . ";base64," . base64_encode($article['article_image']) . "'width='400'/>";  ?>
+      echo "<embed src='data:" . $article["article_image_type"] . ";base64," . base64_encode($article['article_image_data']) . "'width='400'/>";  ?>
     </div>
-    <div class="articleContenu"><?= $article['article_contenu']; ?></div>
+    <div  class="articleContenu"><?= $article['article_contenu']; ?></div>
   </div>
 
-  <?php include('../../footer.html'); ?>
+  <?php include('../../includes/footer.php'); ?>
 </body>
 
 </html>

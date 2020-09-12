@@ -82,11 +82,11 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
         </div>
       </aside>
       <div class="container__mainContent--articles">
-        <!--  -->
+        <!-- article 0 -->
         <div class="container__mainContent__articles--first">
 
-          <img src="assets/images/Image-article-3-landing-page.png" />
-          <div class="description">
+        <?php
+        echo "<embed src='data:" . $articles[0]["article_image_type"] . ";base64," . base64_encode($articles[0]['article_image_data']) . "'width='380'/>";  ?>          <div class="description">
             <h2 class="titre"><a href="#"><?= $articles[0]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
             <?= $articles[0]["article_titre"] ?>
@@ -95,28 +95,29 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
               <a href="#">
                 <img src="assets/images/John-Doe.png" alt="profil de John-Doe" />
               </a>
-              <date><?= $articles[0]["article_date"] ?></date>
+              <date><?= date('d-M-Y', strtotime($articles[0]['article_date'])) ?></date>
               <a class="categorie" href="#">Catégorie</a>
             </div>
           </div>
         </div> 
-      <!-- -->
+      <!-- article 1-->
         <div class="container__mainContent__articles--first">
-          <img src="assets/images/Image-article-4-landing-page.png" />
-          <div class="description">
-            <h2 class="titre"><a href="#">Créativité</a></h2>
+        <?php
+        echo "<embed src='data:" . $articles[1]["article_image_type"] . ";base64," . base64_encode($articles[1]['article_image_data']) . "'width='380'/>";  ?>          <div class="description">
+            <h2 class="titre"><a href="#"><?= $articles[1]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
-              Développer sa créativité à l’aide d’une méthode
+            <?= $articles[1]["article_titre"] ?>
             </p>
             <div class="description--sections">
               <a href="#">
                 <img src="assets/images/Jane-Doe.png" alt="profil de Jane" />
               </a>
-              <date>25 aout 2020</date>
+              <date><?= date('d-M-Y', strtotime($articles[1]['article_date'])) ?></date>
               <a class="categorie" href="#">Catégorie</a>
             </div>
           </div>
         </div>
+         <!-- -->
         <aside>
           <div class="container__mainContent--destop">
             <p>Catégories à découvrir</p>
@@ -129,33 +130,34 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
           </div>
         </aside>
         <div class="container__mainContent__articles--first">
-          <img src="assets/images/Image-article-5-landing-page.png" />
-          <div class="description">
-            <h2 class="titre"><a href="#">Rédaction</a></h2>
+        <?php
+        echo "<embed src='data:" . $articles[2]["article_image_type"] . ";base64," . base64_encode($articles[2]['article_image_data']) . "'width='380'/>";  ?>          <div class="description">
+            <h2 class="titre"><a href="#"><?= $articles[2]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
-              5 outils pour rédiger efficacement pour le web
+            <?= $articles[2]["article_titre"] ?>
             </p>
             <div class="description--sections">
               <a href="#">
                 <img src="assets/images/John-Doe.png" alt="profil de l'auteur" />
               </a>
-              <date>27 aout 2020</date>
+              <date><?= date('d-M-Y', strtotime($articles[2]['article_date'])) ?></date>
               <a class="categorie" href="#">Catégorie</a>
             </div>
           </div>
         </div>
         <div class="container__mainContent__articles--first">
-          <img src="assets/images/Image-article-6-landing-page.png" />
+        <?php
+        echo "<embed src='data:" . $articles[3]["article_image_type"] . ";base64," . base64_encode($articles[3]['article_image_data']) . "'width='380'/>";  ?>
           <div class="description">
-            <h2 class="titre"><a href="#">Carrière</a></h2>
+            <h2 class="titre"><a href="#"><?= $articles[3]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
-              Devenir web développeur mobile
+            <?= $articles[3]["article_titre"] ?>
             </p>
             <div class="description--sections">
               <a href="#">
                 <img src="assets/images/Jane-Doe.png" alt="profil de l'auteur" />
               </a>
-              <date>29 aout 2020</date>
+              <date><?= date('d-M-Y', strtotime($articles[3]['article_date'])) ?></date>
               <a class="categorie" href="#">Catégorie</a>
             </div>
           </div>

@@ -11,6 +11,13 @@ $query = $conn->prepare($sql);
 $query->bindValue(':id', $_SESSION["user_id"]);
 $query->execute();
 
+$sql = "DELETE FROM `articles` WHERE `user_id`=:id";
+
+$query = $conn->prepare($sql);
+
+$query->bindValue(':id', $_SESSION["user_id"]);
+$query->execute();
+
 session_unset();
 
  header('Location: ../../client/indexArticles.php');

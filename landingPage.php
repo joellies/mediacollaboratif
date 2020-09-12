@@ -15,13 +15,12 @@
       <div class="container__mainContent">
         <div class="container__mainContent--header">
           <div class="container__mainContent--logo">
-            <h1>MECO</h1>
-            Logo
+            <img src="./assets/images/logo.svg" alt=""> 
             <h4>Lorem ipsum dolor sit amet</h4>
           </div>
           <div class="container__mainContent--text">
-            <a class="inscription" href="inscription.html">S'inscrire</a>
-            <a class="connexion" href="#formulaire-connexion">Se connecter</a>
+            <a class="inscription" href="./client/inscription.php">S'inscrire</a>
+            <a class="connexion" href="./client/connexionLoginInterface.php">Se connecter</a>
             <a class="continuerSansCompte" href="landing.html">
               Continuer sans compte
             </a>
@@ -50,7 +49,7 @@
                 </a>
                 <a
                   class="connexion"
-                  href="./server/user/connexionLogin.php"
+                  href="./client/connexionLoginInterface.php"
                 >
                   Se connecter
                 </a>
