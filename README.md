@@ -5,5 +5,5 @@
 
       Joellie          -           Ziadoon          -          Virginie         -         Rachel
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+
+Visitez Notre siteWeb en ligne [Meco](http://github.com)
