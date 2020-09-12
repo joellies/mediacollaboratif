@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Média Collaboratif</title>
-    <link rel="stylesheet" href="style-mobile.css" />
+    <link rel="stylesheet" href="assets/css/style-mobile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <div class="container__mainContent">
         <div class="container__mainContent--header">
           <div class="container__mainContent--logo">
-            <h1>MECO</h1>
-            Logo
+            <img src="./assets/images/logo.svg" alt=""> 
             <h4>Lorem ipsum dolor sit amet</h4>
           </div>
           <div class="container__mainContent--text">
-            <a class="inscription" href="inscription.html">S'inscrire</a>
-            <a class="connexion" href="#formulaire-connexion">Se connecter</a>
+            <a class="inscription" href="./client/inscription.php">S'inscrire</a>
+            <a class="connexion" href="./client/connexionLoginInterface.php">Se connecter</a>
             <a class="continuerSansCompte" href="landing.html">
               Continuer sans compte
             </a>
@@ -38,14 +41,22 @@
                 pour la communauté ? Vous êtes au bon endroit.
               </p>
               <div class="button">
-                <a class="inscription" href="inscription.html">S'inscrire</a>
-                <a class="connexion" href="#formulaire-connexion">
+                <a
+                  class="inscription"
+                  href="./client/inscription.php"
+                >
+                  S'inscrire
+                </a>
+                <a
+                  class="connexion"
+                  href="./client/connexionLoginInterface.php"
+                >
                   Se connecter
                 </a>
               </div>
             </div>
             <div class="container__mainContent__destop__block1--image">
-              <img src="images/Landing-image.png" alt="" />
+              <img src="./assets/images/Landing-image.png" alt="" />
             </div>
           </div>
           <h4 class="tirezProfit">
@@ -54,7 +65,7 @@
           <div class="container__mainContent__destop--block2">
             <div class="troisColonnes">
               <div class="cercle">
-                <img src="images/icone article 1.png" />
+                <img src="./assets/images/icone article 1.png" />
               </div>
               <p>
                 Une multitude d’articles
@@ -64,7 +75,7 @@
             </div>
             <div class="troisColonnes">
               <div class="cercle">
-                <img src="images/Icone communauté.png" />
+                <img src="./assets/images/Icone communauté.png" />
               </div>
               <p>
                 Une communauté engagée
@@ -74,7 +85,7 @@
             </div>
             <div class="troisColonnes">
               <div class="cercle">
-                <img src="images/Icone 3.png" />
+                <img src="./assets/images/Icone 3.png" />
               </div>
               <p>
                 C’est gratuit et sans
@@ -88,8 +99,16 @@
               Découvez MECO dès maintenant et écrivez votre premier article !
             </h4>
             <div class="bottomButton">
-              <a class="inscription" href="inscription.html">S'inscrire</a>
-              <a class="continuerSansCompte" href="landing.html">
+              <a
+                class="inscription"
+                href="./client/inscription.php"
+              >
+                S'inscrire
+              </a>
+              <a
+                class="continuerSansCompte"
+                href="./homepage.php"
+              >
                 Continuer sans compte
               </a>
             </div>
