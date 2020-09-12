@@ -7,7 +7,7 @@ if (
   !isset($_POST["userMdp"],
   $_POST["userMail"])
 ) {
-  echo "the  is not exist";
+  header("Location: ../../client/connexionLoginInterface.php");
 
 } else {
 
@@ -26,10 +26,9 @@ if (
                 AND user_mdp=:user_mdp");
       $stmt->execute(['user_email' => $userMail, 'user_mdp' => $userMdp]);
       $user = $stmt->fetch();
-      var_dump($user);
 
       if (!$user) {
-
+        header("Location: ../../client/connexionLoginInterface.php");
       } else {
         //if the user is connected then :
         $userid = $user["user_id"];

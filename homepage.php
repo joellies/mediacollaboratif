@@ -86,10 +86,10 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
         <div class="container__mainContent__articles--first">
 
         <?php
-        echo "<embed src='data:" . $articles[0]["article_image_type"] . ";base64," . base64_encode($articles[0]['article_image_data']) . "'width='380'/>";  ?>          <div class="description">
-            <h2 class="titre"><a href="#"><?= $articles[0]["categorie_nom"] ?></a></h2>
+        echo "<a href='./server/article/readArticle.php?id=".$articles[0]["article_id"]."'><embed src='data:" . $articles[0]["article_image_type"] . ";base64," . base64_encode($articles[0]['article_image_data']) . "'width='380'/></a>";  ?>          <div class="description">
+            <h2 class="titre"><?= $articles[0]["article_titre"] ?></a></h2>
             <p class="container__mainContent--destop">
-            <?= $articles[0]["article_titre"] ?>
+            <a href="#"><?= $articles[0]["categorie_nom"] ?>
             </p>
             <div class="description--sections">
               <a href="#">
@@ -103,7 +103,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
       <!-- article 1-->
         <div class="container__mainContent__articles--first">
         <?php
-        echo "<embed src='data:" . $articles[1]["article_image_type"] . ";base64," . base64_encode($articles[1]['article_image_data']) . "'width='380'/>";  ?>          <div class="description">
+        echo "<a href='./server/article/readArticle.php?id=".$articles[1]["article_id"]."'><embed src='data:" . $articles[1]["article_image_type"] . ";base64," . base64_encode($articles[1]['article_image_data']) . "'width='380'/></a>";  ?>          <div class="description">
             <h2 class="titre"><a href="#"><?= $articles[1]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
             <?= $articles[1]["article_titre"] ?>
@@ -131,7 +131,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
         </aside>
         <div class="container__mainContent__articles--first">
         <?php
-        echo "<embed src='data:" . $articles[2]["article_image_type"] . ";base64," . base64_encode($articles[2]['article_image_data']) . "'width='380'/>";  ?>          <div class="description">
+        echo "<a href='./server/article/readArticle.php?id=".$articles[2]["article_id"]."'><embed src='data:" . $articles[2]["article_image_type"] . ";base64," . base64_encode($articles[2]['article_image_data']) . "'width='380'/></a>";  ?>          <div class="description">
             <h2 class="titre"><a href="#"><?= $articles[2]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">
             <?= $articles[2]["article_titre"] ?>
@@ -147,7 +147,7 @@ $articles = $statement->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="container__mainContent__articles--first">
         <?php
-        echo "<embed src='data:" . $articles[3]["article_image_type"] . ";base64," . base64_encode($articles[3]['article_image_data']) . "'width='380'/>";  ?>
+        echo "<a href='./server/article/readArticle.php?id=".$articles[3]["article_id"]."'><embed src='data:" . $articles[3]["article_image_type"] . ";base64," . base64_encode($articles[3]['article_image_data']) . "'width='380'/></a>";  ?>
           <div class="description">
             <h2 class="titre"><a href="#"><?= $articles[3]["categorie_nom"] ?></a></h2>
             <p class="container__mainContent--destop">

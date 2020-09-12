@@ -50,16 +50,13 @@
 include_once "../../db/db.php";
  if (isset($_POST['article_contenu'],$_POST['article_titre']) && $_FILES['article_image']['size'] > 0) 
 {
-  var_dump($_FILES['article_image'] );
 
   $id = $_GET["id"];
   $titre = $_POST["article_titre"];
   $contenu = $_POST["article_contenu"];
   $article_image_data = file_get_contents($_FILES["article_image"]["tmp_name"]);
-  var_dump($article_image_data);
 
   $article_image_type = $_FILES['article_image']['type'];
-  var_dump($article_image_type);
 
   $sql = "UPDATE `articles` SET  `article_titre` = :article_titre,`article_contenu` = :article_contenu ,
   `article_image_type` =:article_image_type, `article_image_data`=:article_image_data WHERE `articles`.`article_id` = :id";
@@ -74,7 +71,10 @@ include_once "../../db/db.php";
 
  $statment = $conn->prepare($sql);
 $resul = $statment->execute($bindArray);
-var_dump($resul);
+if($resul)
+{
+  header("Location: ../../client/indexArticles.php");
+}
 
 }else if (isset($_POST['article_contenu'],$_POST['article_titre'])) {
   $id = $_GET["id"];
@@ -92,6 +92,10 @@ $bindArray = [
 
 $statment = $conn->prepare($sql);
 $resul = $statment->execute($bindArray);
+if($resul)
+{
+  header("Location: ../../client/indexArticles.php");
+}
 
 } else {
   echo "Merci de remplir tous les champs";
